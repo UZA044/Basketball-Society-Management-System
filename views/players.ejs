@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device_width, initial-scale=1.0">
+        <title> View ALL </title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+
+<body>
+    <div class="content">
+        <nav   >
+            <ul>
+                    <li><a href="/"> Home </a> </li>
+                    <li><a href="/players"> View Players </a> </li>
+                    <li><a href="/players/create"> Create New Player </a> </li>
+
+            </ul>
+        </nav>
+
+        <section class="dataTable">
+            <h1> Basketball Players </h1>
+
+		<table class="data">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Membership ID</th>
+                <th>Position</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Membership Type</th>
+                <th>Actions</th>
+            </tr>
+                <% Players.forEach(player =>{ %>
+                    <tr>
+                        <td> <%= player.Stu_FName %> </td> 
+                        <td> <%= player.Stu_LName %> </td>
+                        <td> <%= player.Membership_ID %> </td>
+                        <td> <%= player.Position %> </td>
+                        <td> <%= player.Height %> </td>
+                        <td> <%= player.Weight %></td>
+                        <td> <%= player.Membership_Type %> </td>
+                        <td> <a href="/players/edit/<%=player.Membership_ID%>"> Edit </a>
+                             <a href="/players/view/<%=player.Membership_ID%>"> View</a>
+                            
+                        </td>
+
+                    </tr>
+                <% })%>
+
+           
+        </table>
+    </section>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device_width, initial-scale=1.0">
+        <title> View ALL </title>
+        <link rel="stylesheet" href="/main.css">
+    </head>
+
+
+<body>
+    <div class="CreatePlayer">
+        <nav   >
+            <ul>
+                    <li><a href="/"> Home </a> </li>
+                    <li><a href="/players"> View Players </a> </li>
+                    <li><a href="/players/create"> Create New Player </a> </li>
+
+            </ul>
+        </nav>
+        <section>
+            <h1> Add New Player Details </h1>
+            <h3> <form method ="post" class="edit form">
+
+
+                <label for ="Weight"> Weight (kg): </label>
+                <input type="weight" value="" name ="Weight" required>
+                <label for ="Weight"> URN: </label>
+                <input type="height" value="" name ="URN" required>
+                <label for ="Weight"> Height (feet.inches): </label>
+                <input type="height" value="" name ="Height" required>
+                <label for ="Weight"> Membership_Type: </label>
+                <select class="form-control" name="Memb_Type" id="Memb_Type" required>
+                    <% MembershipTypes.forEach( Type=>{ %>
+                        <option value="<%=Type%>"> <%=Type%> </option>
+
+
+
+                        <% }) %>
+                </select>
+                <label for ="Position"> Position: </label>
+                <select class="form-control" name="Position" id="Position" required>
+                    <% PositionValues.forEach( Position=>{ %>
+                        <option value="<%=Position%>"> <%=Position%> </option>
+
+                        <% }) %>
+                </select>
+                <input class="cta-button" type="submit" value="SUBMIT">
+
+
+
+                
+                
+            
+
+                </form>
+                </h3>
+                <h2><%=message%></h2>
+        </section>
+      
+
+    </div>
+    
+</body>
+</html>

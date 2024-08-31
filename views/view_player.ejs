@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device_width, initial-scale=1.0">
+        <title> View ALL </title>
+        <link rel="stylesheet" href="/main.css">
+    </head>
+
+
+<body>
+    <div class="ViewOne">
+        <nav>
+            <ul>
+                    <li><a href="/"> Home </a> </li>
+                    <li><a href="/players"> View Players </a> </li>
+                    <li><a href="/players/create"> Create New Player </a> </li>
+
+            </ul>
+        </nav>
+
+        <% if (Player && Player.length > 0) { %>
+            <section>
+                <h1> Player Details : </h1>
+                <h3> Membership ID: <%= Player[0].Membership_ID %> </h3>
+                <h3> Player First Name: <%= Player[0].Stu_FName %> </h3>
+                <h3> Player Second Name: <%= Player[0].Stu_LName %></h3>
+                <h3> Player Position: <%= Player[0].Position %></h3>
+                <h3> Player Weight: <%= Player[0].Weight%></h3>
+                <h3> Player Height: <%=Player[0].Height%></h3>
+                <h3> Player Membership Type: <%=Player[0].Membership_Type%></h3>
+            </section>
+        <% } %>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--THIS IS WHERE EVERYTHING GOES-->
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device_width, initial-scale=1.0">
+            <title> Homepage </title>
+            <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <!--THIS IS WHERE Content GOES-->
+    <div class="content">
+            <nav   >
+                <ul>
+                        <li><a href="/"> Home </a> </li>
+                        <li><a href="/players"> View Players </a> </li>
+                        <li><a href="/players/create"> Create New Player </a> </li>
+
+                </ul>
+            </nav>
+            <!--HERO SECTION (Backdrop etc)-->
+            <header class="hero">
+                <h1> Welcome to the Basketball Society Dashboard </h1>
+                <!--<a href="view_all.html" class="cta-button">Explore SUIII</a>-->
+            </header>
+            <section class="Dashboard">
+                <div class="column">
+                <h3>Number of Students part of the Society:
+                    <h2>
+                        <%= playerCount %>
+                    </h2>
+                <h3>
+                </div>
+                <div class="column">
+                <h3>
+                    Average Weight of Players:
+                    <h2>
+                        <%= AvgPlayerWeight %> kg
+                    </h2>
+                </h3>
+                </div>
+                <div class="column">
+                <h3>
+                    Average Height of Players:
+                    <h2>
+                        <%=AvgPlayerHeight%> 
+                    </h2>
+                </h3>
+                </div>
+                <div class="column">
+                    <h3>
+                        Committee Members:
+                        <h2>
+                            <%=CommitteCount%>
+                        </h2>
+                    </h3>
+                    </div>
+                
+            </section>
+    </div>
+    <footer>
+            <h2> Contact Us:</h2>
+
+            <form action="/" method="get">
+
+                <p>
+                    <input type="email" id="email" name="email" placeholder="Pleace enter your email" required>
+                </p>
+                <p>
+                    <input type="text" id="text" name="enquiry" placeholder="Enter Details Of Your Enquiry" required>
+                </p>
+                <input class="cta-button" type="submit" value="SUBMIT">
+            </form>
+    </footer>
+
+</body>
+
+</html>

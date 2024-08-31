@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device_width, initial-scale=1.0">
+        <title> View ALL </title>
+        <link rel="stylesheet" href="/main.css">
+    </head>
+
+
+<body>
+    <div class="EditOne">
+        <nav   >
+            <ul>
+                    <li><a href="/"> Home </a> </li>
+                    <li><a href="/players"> View Players </a> </li>
+                    <li><a href="/players/create"> Create New Player </a> </li>
+
+            </ul>
+        </nav>
+        <% if (Player && Player.length > 0) { %>
+        <section>
+            <h1> Edit <%=Player[0].Stu_FName%> <%=Player[0].Stu_LName%> Details</h1>
+
+            <h3> <form method ="post" class="edit form">
+
+                <label for ="Position"> Update Position: </label>
+                <select class="form-control" name="Position" id="Position" required>
+                    <% PositionValues.forEach( Position=>{ %>
+                        <!-- check if student.Stu_Course === course.Crs_Code then selected-->
+                        <option value="<%= Position %>"<%=Player[0].Position===Position ? 'selected' : '' %>> <%= Position %>
+                        </option>
+
+
+                        <% }) %>
+
+                </select>
+                <label for ="Weight"> Update Weight (kg): </label>
+                <input type="weight" value="<%=Player[0].Weight%>" name ="Weight" required>
+                <label for ="Weight"> Update Height (feet.inches): </label>
+                <input type="height" value="<%=Player[0].Height%>" name ="Height" required>
+                <input class="cta-button" type="submit" value="SUBMIT">
+
+
+
+                
+                
+            
+
+                </form>
+                </h3>
+                <h2><%=message%></h2>
+        </section>
+        <% }%>
+
+    </div>
+    
+</body>
+</html>
+
