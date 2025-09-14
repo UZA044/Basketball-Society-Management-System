@@ -1,8 +1,6 @@
 Basketball Society Management
 =====================================
 
-https://basketball-society-management.vercel.app/
-
 This project is a full-stack website designed for my University's Basketball Society. The website serves as a management tool that allows the committee to view, edit, and manage player information, among other functionalities. The project showcases my ability to develop, deploy, and manage a full-stack application with a modern tech stack.
 
 Key Features
